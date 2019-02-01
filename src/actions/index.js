@@ -75,3 +75,49 @@ export const setPopularState = state => {
         payload: state
     };
 };
+
+// FOR MOVIE-->
+
+export const clearMovie = () => {
+    return {
+        type: actions.CLEAR_MOVIE,
+        payload: null
+    };
+};
+
+export const getMovie = movieId => {
+    let endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`;
+    let newState = {};
+
+    const request = fetchMovies(endpoint, result => {
+        if (result.status_code) {
+            // If we don't find any movie
+            return newState;
+        } else {
+            newState = { movie: result };
+            endpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
+
+            return fetchMovies(endpoint, result => {
+                const directors = result.crew.filter(
+                    member => member.job === "Director"
+                );
+                newState.actors = result.cast;
+                newState.directors = directors;
+
+                return newState;
+            });
+        }
+    }).catch(error => console.error("Error:", error));
+
+    return {
+        type: actions.GET_MOVIE,
+        payload: request
+    };
+};
+
+export const setMovieState = state => {
+    return {
+        type: actions.SET_MOVIE_STATE,
+        payload: state
+    };
+};

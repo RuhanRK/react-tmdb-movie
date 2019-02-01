@@ -8,3 +8,8 @@ export const SET_POPULAR_STATE = "SET_POPULAR_STATE";
 
 // Action for boths
 export const SHOW_LOADING_SPINNER = "SHOW_LOADING_SPINNER";
+
+// Action types for Movie
+export const GET_MOVIE = "GET_MOVIE";
+export const CLEAR_MOVIE = "CLEAR_MOVIE";
+export const SET_MOVIE_STATE = "SET_MOVIE_STATE";
