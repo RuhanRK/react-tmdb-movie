@@ -1,15 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.css";
 
 const Header = () => {
     return (
         <header className="header">
             <div>
-                <img
-                    src="./images/reactMovie_logo.png"
-                    alt=""
-                    className="react-movie"
-                />
+                <Link to="/">
+                    <img
+                        src="./images/reactMovie_logo.png"
+                        alt=""
+                        className="react-movie"
+                    />
+                </Link>
             </div>
             <div>
                 <img
