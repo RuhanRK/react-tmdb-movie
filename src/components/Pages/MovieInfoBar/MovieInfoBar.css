@@ -1,0 +1,39 @@
+.movieinfo-bar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.movieinfo-bar-content {
+    width: 100%;
+    height: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.movieinfo-bar-content__col {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    margin: 10px 0;
+    background-color: rgba(69, 100, 146, 0.1);
+    border-radius: 10px;
+    height: 100%;
+    padding: 20px 10px;
+}
+
+.movieinfo-bar-content__col > * {
+    padding-right: 10px;
+}
+
+@media (min-width: 800px) {
+    .movieinfo-bar-content {
+        align-items: center;
+        justify-content: space-around;
+    }
+}
