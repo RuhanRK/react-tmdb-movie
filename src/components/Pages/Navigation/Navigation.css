@@ -1,0 +1,19 @@
+.navigation {
+    background-color: #192a56;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+
+.navigation .navigation-content {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    transform: translateX(10%);
+}
+
+.navigation .navigation-content p {
+    margin: 0 10px;
+    font-style: italic;
+    font-size: 30px;
+}
