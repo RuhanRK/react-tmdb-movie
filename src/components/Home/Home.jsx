@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "react-scroll-up";
 
 import HeroImage from "../Pages/HeroImage/HeroImage";
 import SearchBar from "../Pages/SearchBar/SearchBar";
@@ -8,6 +9,8 @@ import MovieThumbnail from "../Pages/MovieThumbnail/MovieThumbnail";
 import { POSTER_SIZE, IMAGE_BASE_URL } from "../../configurations/config";
 import Spinner from "../Pages/Spinner/Spinner";
 import LoadMoreButton from "../Pages/LoadMoreButton/LoadMoreButton";
+
+import "./Home.css";
 
 const Home = ({
     totalPages,
@@ -51,6 +54,11 @@ const Home = ({
                         );
                     })}
                 </FourGrid>
+                <ScrollToTop showUnder={160}>
+                    <span>
+                        <i className="fas fa-arrow-circle-up fa-3x top" />
+                    </span>
+                </ScrollToTop>
                 {/* check loading status and render Spinner */}
                 {loading ? <Spinner /> : null}
                 {/* render load more button depends on some cindition */}
