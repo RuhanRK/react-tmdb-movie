@@ -1,15 +1,9 @@
 .movie-info {
     width: 100%;
-    min-height: 550px;
-    /* background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 59%,
-            rgba(0, 0, 0, 0) 41%,
-            rgba(0, 0, 0, 0.65) 100%
-        ),
-        url("http://image.tmdb.org/t/p/w1280/5A2bMlLfJrAfX9bqAibOL2gCruF.jpg"); */
-    background-size: 100%, cover !important;
+    min-height: 600px;
+    background-size: cover !important;
     background-position: center, center !important;
+    background-repeat: no-repeat !important;
     padding: 50px;
 }
 .movie-info-details {
@@ -52,12 +46,18 @@
     font-family: "Saira Extra Condensed", sans-serif;
 }
 
+.movie-info-rating h3,
+.director h3 {
+    font-size: 10px;
+}
+
 .director,
 .movie-info-rating {
     display: flex;
     justify-content: center;
     margin: 10px 0;
     align-content: center;
+    align-items: center;
 }
 
 .director > *,
@@ -90,6 +90,10 @@
         font-size: 18px;
     }
 
+    .movie-info-rating h3,
+    .director h3 {
+        font-size: 18px;
+    }
     .director,
     .movie-info-rating {
         justify-content: flex-start;
@@ -106,5 +110,9 @@
 @media (min-width: 1700px) {
     .movie-info-text {
         font-size: 30px;
+    }
+    .movie-info-rating h3,
+    .director h3 {
+        font-size: 25px;
     }
 }

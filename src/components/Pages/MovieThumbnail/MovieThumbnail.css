@@ -3,7 +3,10 @@
     height: 100%;
     transition: all 0.3s;
 }
-
+.thumbnail img {
+    height: 100%;
+    width: 100%;
+}
 .clickable {
     cursor: pointer;
 }
