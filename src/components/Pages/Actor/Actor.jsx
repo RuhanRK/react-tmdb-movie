@@ -6,8 +6,9 @@ import "./Actor.css";
 
 const Actor = props => {
     const POSTER_SIZE = "w154";
+    console.log(props.actor.character);
     return (
-        <div className="rmdb-actor">
+        <div className="actor">
             <img
                 src={
                     props.actor.profile_path
@@ -18,10 +19,10 @@ const Actor = props => {
                 }
                 alt="actors thumb"
             />
-            <span className="rmdb-actor-name">{props.actor.name}</span>
-            <span className="rmdb-actor-character">
-                {props.actor.character}
-            </span>
+            <div className="actor-details">
+                <span className="actor-name">{props.actor.name}</span>
+                <span className="actor-character">{props.actor.character}</span>
+            </div>
         </div>
     );
 };
