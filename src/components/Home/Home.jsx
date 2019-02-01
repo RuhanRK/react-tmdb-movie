@@ -6,6 +6,8 @@ import FourGrid from "../Pages/FourGrid/FourGrid";
 import MovieThumbnail from "../Pages/MovieThumbnail/MovieThumbnail";
 
 import { POSTER_SIZE, IMAGE_BASE_URL } from "../../configurations/config";
+import Spinner from "../Pages/Spinner/Spinner";
+import LoadMoreButton from "../Pages/LoadMoreButton/LoadMoreButton";
 
 const Home = props => {
     const {
@@ -50,6 +52,12 @@ const Home = props => {
                         );
                     })}
                 </FourGrid>
+                {/* check loading status and render Spinner */}
+                {loading ? <Spinner /> : null}
+                {/* render load more button depends on some cindition */}
+                {currentPage <= totalPages && !loading ? (
+                    <LoadMoreButton text="Load More" onClick={loadMoreMovies} />
+                ) : null}
             </div>
         </React.Fragment>
     );
