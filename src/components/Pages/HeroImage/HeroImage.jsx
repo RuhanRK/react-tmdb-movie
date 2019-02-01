@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../../configurations/config";
 
@@ -32,6 +33,10 @@ const HeroImage = props => {
             </div>
         </React.Fragment>
     );
+};
+
+HeroImage.propTypes = {
+    heroImage: PropTypes.object.isRequired
 };
 
 export default HeroImage;

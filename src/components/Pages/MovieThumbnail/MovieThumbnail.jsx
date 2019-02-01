@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import "./MovieThumbnail.css";
 
@@ -17,6 +18,13 @@ const MovieThumbnail = ({ image, movieId, movieName, clickable }) => {
             </div>
         </React.Fragment>
     );
+};
+
+MovieThumbnail.propTypes = {
+    image: PropTypes.string,
+    movieId: PropTypes.number,
+    movieName: PropTypes.string,
+    clickable: PropTypes.bool
 };
 
 export default MovieThumbnail;

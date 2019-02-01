@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {
     IMAGE_BASE_URL,
@@ -11,6 +12,7 @@ import "./MovieInfo.css";
 
 const MovieInfo = props => {
     const { movie, directors } = props;
+
     return (
         <div
             className="movie-info"
@@ -69,6 +71,11 @@ const MovieInfo = props => {
             </div>
         </div>
     );
+};
+
+MovieInfo.propTyps = {
+    movie: PropTypes.object.isRequired,
+    directors: PropTypes.array.isRequired
 };
 
 export default MovieInfo;

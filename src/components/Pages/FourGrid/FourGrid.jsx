@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./FourGrid.css";
 
@@ -19,6 +20,11 @@ const FourGrid = props => {
             <div className="four-col-grid">{renderElements()}</div>
         </div>
     );
+};
+
+FourGrid.propTypes = {
+    header: PropTypes.string.isRequired,
+    children: PropTypes.array.isRequired
 };
 
 export default FourGrid;

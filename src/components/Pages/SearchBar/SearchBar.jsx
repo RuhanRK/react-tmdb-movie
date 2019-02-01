@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import "./SearchBar.css";
 export default class SearchBar extends Component {
@@ -41,3 +42,7 @@ export default class SearchBar extends Component {
         );
     }
 }
+
+SearchBar.popTypes = {
+    searchTerms: PropTypes.func.isRequired
+};

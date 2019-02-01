@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Spinner from "./../Pages/Spinner/Spinner";
 import Navigation from "./../Pages/Navigation/Navigation";
@@ -7,8 +8,7 @@ import MovieInfoBar from "./../Pages/MovieInfoBar/MovieInfoBar";
 import FourGrid from "./../Pages/FourGrid/FourGrid";
 import Actor from "./../Pages/Actor/Actor";
 
-const Movie = props => {
-    const { movie, directors, actors, loading } = props;
+const Movie = ({ movie, directors, actors, loading }) => {
     if (movie && directors && actors) {
         return (
             <React.Fragment>
@@ -30,6 +30,13 @@ const Movie = props => {
     } else {
         return <Spinner />;
     }
+};
+
+Movie.propTypes = {
+    actors: PropTypes.array,
+    directors: PropTypes.array,
+    loading: PropTypes.bool,
+    movie: PropTypes.object
 };
 
 export default Movie;

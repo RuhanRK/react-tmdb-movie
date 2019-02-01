@@ -9,17 +9,16 @@ import { POSTER_SIZE, IMAGE_BASE_URL } from "../../configurations/config";
 import Spinner from "../Pages/Spinner/Spinner";
 import LoadMoreButton from "../Pages/LoadMoreButton/LoadMoreButton";
 
-const Home = props => {
-    const {
-        totalPages,
-        searchTerm,
-        searchMovies,
-        movies,
-        loading,
-        loadMoreMovies,
-        heroImage,
-        currentPage
-    } = props;
+const Home = ({
+    totalPages,
+    searchTerm,
+    searchMovies,
+    movies,
+    loading,
+    loadMoreMovies,
+    heroImage,
+    currentPage
+}) => {
     return (
         <React.Fragment>
             {/* First check heroImage available or not */}
