@@ -14,7 +14,21 @@ import {
 
 class HomeContainer extends Component {
     componentDidMount() {
-        this.getMovies();
+        if (localStorage.getItem("HomeStorage")) {
+            const home = JSON.parse(localStorage.getItem("HomeStorage"));
+            this.props.setPopularState(home);
+        } else {
+            this.getMovies();
+        }
+    }
+
+    componentDidUpdate() {
+        // First check movies loaded or not
+        if (this.props.movies.length > 0) {
+            if (this.props.searchTerm === "") {
+                localStorage.setItem("HomeStorage", JSON.stringify(this.props));
+            }
+        }
     }
 
     getMovies = () => {
