@@ -33,10 +33,10 @@ const Home = ({
                     header={searchTerm ? "Searched Movies" : "Popular Movies"}
                     loading={loading}
                 >
-                    {movies.map((movie, i) => {
+                    {movies.map(movie => {
                         return (
                             <MovieThumbnail
-                                key={i}
+                                key={movie.id}
                                 clickable={true}
                                 image={
                                     movie.poster_path

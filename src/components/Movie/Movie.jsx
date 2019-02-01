@@ -20,8 +20,8 @@ const Movie = ({ movie, directors, actors, loading }) => {
                     revenue={movie.revenue}
                 />
                 <FourGrid header="Actors">
-                    {actors.map((actor, i) => (
-                        <Actor key={i} actor={actor} />
+                    {actors.map(actor => (
+                        <Actor key={actor.id} actor={actor} />
                     ))}
                 </FourGrid>
                 {!actors && !loading ? <h1>No Movie Found</h1> : null}

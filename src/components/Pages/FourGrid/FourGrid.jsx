@@ -7,7 +7,7 @@ const FourGrid = props => {
     const renderElements = () => {
         const gridElements = props.children.map((element, i) => {
             return (
-                <div key={i} className="grid">
+                <div key={element.key} className="grid">
                     {element}
                 </div>
             );
