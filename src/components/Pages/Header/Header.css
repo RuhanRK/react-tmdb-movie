@@ -1,0 +1,21 @@
+.header {
+    background: #243d2f;
+    background: -webkit-linear-gradient(to left, #243d2f, #1c0e54);
+    background: -moz-linear-gradient(to leftt, #243d2f, #1c0e54);
+    background: linear-gradient(to left, #243d2f, #1c0e54);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header div {
+    margin: 2px;
+    height: auto;
+    width: 300px;
+}
+
+.react-movie,
+.rmdb-tmdb-logo {
+    width: 100%;
+    height: 100%;
+}
