@@ -1,0 +1,110 @@
+.movie-info {
+    width: 100%;
+    min-height: 550px;
+    /* background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 59%,
+            rgba(0, 0, 0, 0) 41%,
+            rgba(0, 0, 0, 0.65) 100%
+        ),
+        url("http://image.tmdb.org/t/p/w1280/5A2bMlLfJrAfX9bqAibOL2gCruF.jpg"); */
+    background-size: 100%, cover !important;
+    background-position: center, center !important;
+    padding: 50px;
+}
+.movie-info-details {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie-info-thumb,
+.moviethumb,
+.movie-info-details {
+    height: 100%;
+}
+
+.moviethumb img {
+    height: 100%;
+    max-width: 100%;
+}
+
+.movie-info-text {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.movie-info-text h3 {
+    font-family: "Satisfy", cursive;
+    letter-spacing: 2px;
+}
+
+.movie-info-text h1 {
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 3px;
+}
+
+.movie-info-text p {
+    font-family: "Saira Extra Condensed", sans-serif;
+}
+
+.director,
+.movie-info-rating {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    align-content: center;
+}
+
+.director > *,
+.movie-info-rating > * {
+    padding: 0 10px;
+}
+
+@media (min-width: 800px) {
+    .movie-info-details {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .movie-info-thumb {
+        width: 80%;
+    }
+    .moviethumb img {
+        max-width: 100%;
+    }
+
+    .movie-info-text {
+        width: 80%;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .movie-info-text > h3 {
+        padding: 10px 0;
+    }
+    .movie-info-text p {
+        font-size: 18px;
+    }
+
+    .director,
+    .movie-info-rating {
+        justify-content: flex-start;
+    }
+
+    .director > *,
+    .movie-info-rating > * {
+        padding: 0;
+        padding-right: 5px;
+        align-self: center;
+    }
+}
+
+@media (min-width: 1700px) {
+    .movie-info-text {
+        font-size: 30px;
+    }
+}
