@@ -1,4 +1,4 @@
-import * as ations from "./../actions/actionTypes";
+import * as actions from "./../actions/actionTypes";
 
 const initialState = {
     movie: null,
