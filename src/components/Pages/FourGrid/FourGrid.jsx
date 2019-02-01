@@ -4,13 +4,13 @@ import "./FourGrid.css";
 
 const FourGrid = props => {
     const renderElements = () => {
-        const gridElements = props.children.map((element, i) =>
-            props(
+        const gridElements = props.children.map((element, i) => {
+            return (
                 <div key={i} className="grid">
                     {element}
                 </div>
-            )
-        );
+            );
+        });
         return gridElements;
     };
     return (
