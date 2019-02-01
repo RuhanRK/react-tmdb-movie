@@ -33,6 +33,8 @@ export default class SearchBar extends Component {
                         className="search-bar--content__input"
                         placeholder="Search"
                         id="search"
+                        value={this.state.value}
+                        onChange={this.doSearch}
                     />
                 </div>
             </div>
