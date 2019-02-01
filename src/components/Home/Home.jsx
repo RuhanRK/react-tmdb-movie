@@ -11,6 +11,7 @@ import Spinner from "../Pages/Spinner/Spinner";
 import LoadMoreButton from "../Pages/LoadMoreButton/LoadMoreButton";
 
 import "./Home.css";
+import noImage from "./../../no_image.jpg";
 
 const Home = ({
     totalPages,
@@ -46,7 +47,7 @@ const Home = ({
                                         ? `${IMAGE_BASE_URL}${POSTER_SIZE}${
                                               movie.poster_path
                                           }`
-                                        : "./images/no_image.jpg"
+                                        : noImage
                                 }
                                 movieId={movie.id}
                                 movieName={movie.original_title}
