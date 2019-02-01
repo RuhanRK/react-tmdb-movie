@@ -13,7 +13,7 @@ class App extends Component {
                 <Header />
                 <Switch>
                     <Route path="/" exact component={HomeContainer} />
-                    <Route path="/:movieId" component={MovieContainer} />
+                    <Route path="/movie/:movieId" component={MovieContainer} />
                     <Route component={NotFound} />
                 </Switch>
             </React.Fragment>

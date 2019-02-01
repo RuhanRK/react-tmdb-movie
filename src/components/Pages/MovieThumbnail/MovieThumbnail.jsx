@@ -9,7 +9,7 @@ const MovieThumbnail = ({ image, movieId, movieName, clickable }) => {
         <React.Fragment>
             <div className="thumbnail">
                 {clickable ? (
-                    <Link to={{ pathname: `/${movieId}` }}>
+                    <Link to={`/movie/${movieId}`}>
                         <img src={image} alt={`${movieName} movie`} />
                     </Link>
                 ) : (
