@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./components/Pages/Header/Header";
 import HomeContainer from "./containers/HomeContainer";
 import MovieContainer from "./containers/MovieContainer";
+import NotFound from "./components/Pages/NotFound/NotFound";
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/" exact component={HomeContainer} />
                     <Route path="/:movieId" component={MovieContainer} />
+                    <Route component={NotFound} />
                 </Switch>
             </React.Fragment>
         );
