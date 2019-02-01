@@ -1,6 +1,9 @@
 /* *Font for heroImage h1 and p and load more button*/
 @import url("https://fonts.googleapis.com/css?family=Lobster|PT+Sans+Narrow|Slabo+27px|Major+Mono+Display");
 
+/* *Font for movie container */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Saira+Extra+Condensed|Satisfy");
+
 * {
     margin: 0;
     padding: 0;

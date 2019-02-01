@@ -5,10 +5,10 @@ import "./Navigation.css";
 
 const Navigation = props => {
     return (
-        <div class="navigation">
-            <div class="navigation-content">
+        <div className="navigation">
+            <div className="navigation-content">
                 <Link to="/">
-                    <i class="fas fa-home fa-2x" />
+                    <i className="fas fa-home fa-2x" />
                 </Link>
                 <p>/</p>
                 <p>{props.movie}</p>
