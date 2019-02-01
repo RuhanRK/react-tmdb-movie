@@ -25,7 +25,7 @@ export default class SearchBar extends Component {
         return (
             <div className="search-bar">
                 <div className="search-bar--content">
-                    <label for="search">
+                    <label htmlFor="search">
                         <i className="fas fa-search fa-2x search-bar--content__icon" />
                     </label>
                     <input
