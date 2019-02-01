@@ -1,3 +1,9 @@
+.rmdb-grid h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Major Mono Display", monospace;
+}
 .four-col-grid {
     padding: 30px 70px;
     display: grid;
